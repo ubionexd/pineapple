@@ -1,0 +1,39 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "net.ubinull",
+		"id": "pineapple",
+		"version": "${version}",
+		"metadata": {
+			"name": "Pineapple",
+			"description": "A mod for Quilt's mascot: Pineapple",
+			"contributors": {
+				"ubinull": "Owner"
+			},
+			"contact": {
+				"homepage": "https://ubionexd.vercel.app",
+				"issues": "https://github.com/ubionexd/pineapple/issues",
+				"sources": "https://github.com/ubionexd/pineapple"
+			},
+			"icon": "assets/pineapple/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "net.ubinull.pineapple.Pineapple"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=4.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19.2"
+			}
+		]
+	}
+}
