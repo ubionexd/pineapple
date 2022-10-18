@@ -1,6 +1,6 @@
 package net.ubinull.pineapple;
 
-import net.ubinull.pineapple.item.ModItems;
+import net.ubinull.pineapple.block.ModBlocks;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
@@ -12,7 +12,8 @@ public class Pineapple implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
-		ModItems.registerModItems();
+		// ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 
 		LOGGER.info("{} mod loaded! Made by ubinull :)", mod.metadata().name());
 	}

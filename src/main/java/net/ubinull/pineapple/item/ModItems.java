@@ -8,7 +8,7 @@ import net.ubinull.pineapple.Pineapple;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class ModItems {
-	public static final Item PINEAPPLE = registerItem("pineapple", new Item(new QuiltItemSettings().group(ItemGroup.MISC)));
+	/* public static final Item PINEAPPLE = registerItem("pineapple", new Item(new QuiltItemSettings().group(ItemGroup.MISC)));
 
 	public static void registerModItems() {
 		Pineapple.LOGGER.debug("Registering items for {}", Pineapple.MOD_ID);
@@ -16,5 +16,5 @@ public class ModItems {
 
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registry.ITEM, new Identifier(Pineapple.MOD_ID, name), item);
-	}
+	} */
 }
