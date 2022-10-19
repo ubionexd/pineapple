@@ -4,6 +4,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.client.particle.ItemBreakParticle;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.client.particle.ParticleManager;
+import net.minecraft.client.render.BlockBreakingInfo;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
@@ -12,12 +16,11 @@ import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 
 public class PineappleBlock extends HorizontalFacingBlock {
-	private static VoxelShape SHAPE = Block.createCuboidShape(0.1875, 0.109375, 0.21875, 0.75, 0.734375, 0.78125);
+	private static final VoxelShape SHAPE = Block.createCuboidShape(3.5, 0, 3.5, 12.5, 10, 12.5);
 
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -50,4 +53,5 @@ public class PineappleBlock extends HorizontalFacingBlock {
 	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
 	}
+
 }
