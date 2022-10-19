@@ -12,7 +12,6 @@ public class Pineapple implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
-		// ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
 		LOGGER.info("{} mod loaded! Made by ubinull :)", mod.metadata().name());
