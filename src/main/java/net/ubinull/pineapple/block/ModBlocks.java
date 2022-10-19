@@ -2,8 +2,6 @@ package net.ubinull.pineapple.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.client.particle.ItemBreakParticle;
-import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
