@@ -4,10 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.client.particle.ItemBreakParticle;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.client.particle.ParticleManager;
-import net.minecraft.client.render.BlockBreakingInfo;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.Equippable;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
@@ -19,18 +17,17 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 
-public class PineappleBlock extends HorizontalFacingBlock {
+public class PineappleBlock extends HorizontalFacingBlock implements Equippable {
+	public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 	private static final VoxelShape SHAPE = Block.createCuboidShape(3.5, 0, 3.5, 12.5, 10, 12.5);
+
+	public PineappleBlock(Settings settings) {
+		super(settings);
+	}
 
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
 		return SHAPE;
-	}
-
-	public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-
-	public PineappleBlock(Settings settings) {
-		super(settings);
 	}
 
 	@Nullable
@@ -54,4 +51,7 @@ public class PineappleBlock extends HorizontalFacingBlock {
 		builder.add(FACING);
 	}
 
+	public EquipmentSlot getPreferredSlot() {
+		return EquipmentSlot.HEAD;
+	}
 }

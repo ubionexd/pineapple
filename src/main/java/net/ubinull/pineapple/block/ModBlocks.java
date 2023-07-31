@@ -16,7 +16,7 @@ import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class ModBlocks {
-	public static final Block PINEAPPLE = registerBlock("pineapple", new PineappleBlock(QuiltBlockSettings.copyOf(Blocks.PUMPKIN).nonOpaque().breakInstantly()));
+	public static final Block PINEAPPLE = registerBlock("pineapple", new PineappleBlock(QuiltBlockSettings.copyOf(Blocks.CARVED_PUMPKIN).nonOpaque().breakInstantly()));
 
 	private static void buildingBlocksItemGroupAdd(FabricItemGroupEntries entries) {
 		entries.addItem(PINEAPPLE);
